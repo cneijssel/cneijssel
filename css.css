@@ -1,0 +1,48 @@
+
+body {
+    background-color: #111;
+    background-image:  none  /*   url(background.jpg);*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: center center;              /* optional, center the image */ */
+}
+
+
+ div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10pt;
+    opacity: 0.9;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    text-decoration: none;
+    
+}
+
+div.scrollmenu a:hover {
+    background-color: #700;
+}
+
+h1 {
+    text-align: center;
+    color: white
+}
+
+p  {
+
+    text-align:center;
+    color:white;
+
+}
