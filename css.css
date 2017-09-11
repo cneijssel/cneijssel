@@ -1,51 +1,77 @@
-
 body {
     background-color: #ffffff;
     background-image:  url(rectangles.svg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    max-width: 100%;
     background-repeat: no-repeat;
     /*background-position: center center;              /* optional, center the image */ */
-}
-
-
- div.scrollmenu {
-    background-color: #8c8cd9;
-    overflow: auto;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10pt;
-    opacity: 0.6;
-}
-
-div.scrollmenu a {
-    display: inline-block;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    font-family: Helvetica;
-    padding: 24px;
-    text-decoration: none;
-    border-radius: 5pt;
+    margin-top:0px;
+    margin-left:150px;
+    margin-right:0px;
+    padding:20px:
     
+
 }
 
-div.scrollmenu a:hover {
-    background-color: #ffffff;
-    color: #8c8cd9;
+
+.sidebar{
+    position:absolute;
+    top:0; bottom:0; left:0;
+	width:140px;
+	height:105vh;   /*fudges to not have margin in window*/
+    margin-left:-150px;   /*fudges to not have margin in window*/
+    margin-top:-50px;
+    background:#f00;
+    display: none;
+    opacity:0;
+    overflow:visible;
+    
+
 }
 
-h1 {
-    text-align: center;
-    color: #330066
+.one, .two {
+    height: 150px;
+    width: 140px;
+    float: left;
+    line-height:150px; /*vertical align did not work don know why*/
+    opacity:1;
+    color: white;
     font-size: 20px;
     font-weight: bold;
-    font-family: Georgia;
+    font-family: Helvetica;   
+    text-decoration: none;  /*removes underline href*/
+    margin-left:5px;
+}
+
+.one {
+    margin-top: 160px;
+}
+/*https://stackoverflow.com/questions/12992183/css-transition-fade-on-hover*/
+.sidebar:hover{
+    opacity:1.0;
+    -webkit-transition: opacity .3s;
 }
 
 
+img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -140px;
+    height: auto; 
+    width: auto; 
+    max-width: 120px; 
+    max-height: 120px;
+}
+
+
+/*https://stackoverflow.com/questions/5210033/using-only-css-show-div-on-hover-over-a*/
+.showhim:hover .sidebar{
+display : block;
+  }
+
+
+
+.showhim{
+    position:absolute;
+	width:150px;
+	height:150vh;  
+}
