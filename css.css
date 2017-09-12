@@ -4,6 +4,10 @@ body {
     max-width: 100%;
     background-repeat: no-repeat;
     /*background-position: center center;              /* optional, center the image */ */
+	  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     margin-top:0px;
     margin-left:150px;
     margin-right:0px;
