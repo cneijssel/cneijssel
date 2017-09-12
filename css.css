@@ -1,9 +1,6 @@
 body {
-    background-color: #ffffff;
-    background-image:  url(rectangles.svg) no-repeat center center fixed;
-    max-width: 100%;
-    /*background-position: center center;              /* optional, center the image */ */
-	  -webkit-background-size: cover;
+  background: url(rectanglesClipped.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -11,7 +8,6 @@ body {
     margin-left:150px;
     margin-right:0px;
     padding:20px:
-    overflow: hidden;
 
 }
 
