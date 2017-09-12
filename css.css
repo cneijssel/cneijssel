@@ -23,7 +23,7 @@ body {
     background:#f00;
     display: none;
     opacity:0;
-    overflow:visible;
+    overflow:auto;
     
 
 }
