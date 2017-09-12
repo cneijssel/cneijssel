@@ -19,7 +19,7 @@ body {
 	height:105vh;   /*fudges to not have margin in window*/
     margin-left:-150px;   /*fudges to not have margin in window*/
     margin-top:-50px;
-    background:#f00;
+    background:#ffffe6;
     display: none;
     opacity:0;
     overflow:auto;
@@ -33,7 +33,7 @@ body {
     float: left;
     line-height:150px; /*vertical align did not work don know why*/
     opacity:1;
-    color: white;
+    c-webkit-text-fill-color: transparent;
     font-size: 20px;
     font-weight: bold;
     font-family: Helvetica;   
@@ -56,7 +56,8 @@ img {
     vertical-align: middle;
     margin-left: -140px;
     height: auto; 
-    width: auto; 
+    width: auto;
+    margin-top:100px; 
     max-width: 120px; 
     max-height: 120px;
 }
