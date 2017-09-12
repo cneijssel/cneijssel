@@ -11,6 +11,10 @@ body {
 
 }
 
+body a{
+   position:relative;
+    margin-left:210px;
+}
 
 @font-face {
     font-family: 'ManuellDemo';
