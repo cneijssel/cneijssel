@@ -17,8 +17,8 @@ body a{
 }
 
 @font-face {
-    font-family: 'ManuellDemo';
-    src: url('fonts/ManuellDemo.ttf');
+    font-family: 'OBLIVIOUSFONT';
+    src: url('fonts/OBLIVIOUSFONT.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -50,7 +50,7 @@ body a{
     c-webkit-text-fill-color: transparent;
     font-size: 25px;
     font-weight: bold;
-    font-family: ManuellDemo;   
+    font-family: OBLIVIOUSFONT;   
     text-decoration: none;  /*removes underline href*/
     margin-left:5px;
 }
