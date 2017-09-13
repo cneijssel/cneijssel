@@ -1,0 +1,91 @@
+body {
+  background: url(binarysketchB.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    margin-top:0px;
+    margin-left:210px;
+    margin-right:0px;
+    padding:20px:
+
+}
+
+body a{
+   position:relative;
+    margin-left:210px;
+}
+
+@font-face {
+    font-family: 'OBLIVIOUSFONT';
+    src: url('fonts/OBLIVIOUSFONT.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+.sidebar{
+    position:absolute;
+    top:0; bottom:0; left:0;
+	width:200px;
+	height:105vh;   /*fudges to not have margin in window*/
+    margin-left:-210px;   /*fudges to not have margin in window*/
+    margin-top:-50px;
+    background:#ffffe6;
+    display: none;
+    opacity:0;
+    overflow:auto;
+    
+
+}
+
+.one, .two {
+    height: 150px;
+    width: 140px;
+    float: left;
+    line-height:150px; /*vertical align did not work don know why*/
+    opacity:1;
+    c-webkit-text-fill-color: transparent;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: OBLIVIOUSFONT;   
+    text-decoration: none;  /*removes underline href*/
+    margin-left:5px;
+}
+
+.one {
+    margin-top: 160px;
+}
+/*https://stackoverflow.com/questions/12992183/css-transition-fade-on-hover*/
+.sidebar:hover{
+    opacity:1.0;
+    -webkit-transition: opacity .3s;
+}
+
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -180px;
+    height: auto; 
+    width: auto;
+    margin-top:20px; 
+    max-width: 120px; 
+    max-height: 120px;
+}
+
+
+/*https://stackoverflow.com/questions/5210033/using-only-css-show-div-on-hover-over-a*/
+.showhim:hover .sidebar{
+display : block;
+  }
+
+
+
+.showhim{
+    position:absolute;
+	width:160px;
+	height:150vh;  
+}
