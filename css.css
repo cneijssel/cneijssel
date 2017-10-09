@@ -16,6 +16,13 @@ body a{
     margin-left:210px;
 }
 
+
+.Nbutton{
+   position:relative;
+    margin-left:210px;
+   color:white;
+}
+
 @font-face {
     font-family: 'OBLIVIOUSFONT';
     src: url('fonts/OBLIVIOUSFONT.ttf');
@@ -23,6 +30,9 @@ body a{
     font-style: normal;
 }
 
+h1 {
+    color:white;
+}
 
 
 
@@ -88,4 +98,20 @@ display : block;
     position:absolute;
 	width:160px;
 	height:150vh;  
+}
+
+
+
+#content {
+  float: left ;
+  width: 40% ;
+  font-size: 25px;
+  font-weight: bold;
+}
+#navbar {
+  float: left;
+  width: 20%;
+  font-size: 25px;
+  font-weight: bold;
+  color:white;
 }
