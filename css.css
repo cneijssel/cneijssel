@@ -7,28 +7,31 @@ body {
     margin-top:0px;
     margin-left:210px;
     margin-right:0px;
-    padding:20px:
+    padding:0px:
 
 }
 
-body a{
-   position:relative;
-    margin-left:210px;
+
+.article{
+    width:70%;
+    background-color: none;
+    opacity: 1;
+    color: white;
+    display:inline-block; 
+    padding:0px; 
+    margin-left:-4px; 
+}
+
+div.article:hover {
+    background: rgba(255, 122, 89, 1);
+    padding: 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    opacity: 1;
 }
 
 
-.Nbutton{
-   position:relative;
-    margin-left:210px;
-   color:white;
-}
 
-@font-face {
-    font-family: 'OBLIVIOUSFONT';
-    src: url('fonts/OBLIVIOUSFONT.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
 
 h1 {
     color:white;
@@ -51,8 +54,8 @@ h1 {
 
 }
 
-.one, .two {
-    height: 150px;
+.one{
+    height: 100px;
     width: 140px;
     float: left;
     line-height:150px; /*vertical align did not work don know why*/
@@ -63,15 +66,14 @@ h1 {
     font-family: OBLIVIOUSFONT;   
     text-decoration: none;  /*removes underline href*/
     margin-left:5px;
+    margin-top:50px;
 }
 
-.one {
-    margin-top: 160px;
-}
+
 /*https://stackoverflow.com/questions/12992183/css-transition-fade-on-hover*/
 .sidebar:hover{
     opacity:1.0;
-    -webkit-transition: opacity .3s;
+    -webkit-transition: opacity .5s;
 }
 
 
@@ -82,7 +84,7 @@ img {
     height: auto; 
     width: auto;
     margin-top:20px; 
-    max-width: 120px; 
+    max-width: 100px; 
     max-height: 120px;
 }
 
@@ -96,22 +98,27 @@ display : block;
 
 .showhim{
     position:absolute;
-	width:160px;
-	height:150vh;  
 }
 
 
 
-#content {
-  float: left ;
-  width: 40% ;
-  font-size: 25px;
-  font-weight: bold;
+
+a.article{
+  color: #0000ff;
+  background-color: transparent;
+  text-decoration: none;
 }
-#navbar {
-  float: left;
-  width: 20%;
-  font-size: 25px;
-  font-weight: bold;
-  color:white;
+
+
+
+a.article:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
 }
