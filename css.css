@@ -11,6 +11,39 @@ body.index {
 
 }
 
+.clicker {
+    position:absolute;
+    top:0; bottom:0; left:0;
+	width:100px;
+	height:170px;  
+    background-color:none;
+    background-image: url('Triangles.png');
+    background-repeat: no-repeat; /* for vertical repeat */
+    background-repeat: no-repeat; /* for horizontal repeat */
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.hiddendiv{
+    position:absolute;
+    top:0; bottom:0; left:0;
+	width:200px;
+	height:100vh;   /*fudges to not have margin in window*/
+    background:#ffffe6;
+    display: none;
+    opacity: 0;
+    
+}
+
+.hiddendiv:active{ 
+display: block; 
+
+}
+
+.clicker:focus + .hiddendiv{
+display:block;
+opacity: 1;
+}
 
 .article{
     width:70%;
@@ -39,21 +72,6 @@ h1 {
 
 
 
-.sidebar{
-    position:absolute;
-    top:0; bottom:0; left:0;
-	width:200px;
-	height:105vh;   /*fudges to not have margin in window*/
-    margin-left:-210px;   /*fudges to not have margin in window*/
-    margin-top:-50px;
-    background:#ffffe6;
-    display: none;
-    opacity:0;
-    overflow:auto;
-    
-
-}
-
 .one{
     height: 100px;
     width: 140px;
@@ -70,12 +88,6 @@ h1 {
 }
 
 
-/*https://stackoverflow.com/questions/12992183/css-transition-fade-on-hover*/
-.sidebar:hover{
-    opacity:1.0;
-    -webkit-transition: opacity .5s;
-}
-
 
 img {
     display: inline-block;
@@ -89,16 +101,6 @@ img {
 }
 
 
-/*https://stackoverflow.com/questions/5210033/using-only-css-show-div-on-hover-over-a*/
-.showhim:hover .sidebar{
-display : block;
-  }
-
-
-
-.showhim{
-    position:absolute;
-}
 
 
 
