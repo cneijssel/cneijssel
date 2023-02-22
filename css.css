@@ -1,5 +1,5 @@
 body.index {
-  background: url(test.png) no-repeat center center fixed; 
+  background: url(test2.svg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -102,9 +102,20 @@ display : block;
 
 
 
+a.goto{
+  color: #51addb;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.goto:hover {
+  color: #51addb;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 a.article{
-  color: #0000ff;
+  color: #51addb;
   background-color: transparent;
   text-decoration: none;
 }
@@ -112,7 +123,7 @@ a.article{
 
 
 a.article:hover {
-  color: blue;
+  color: #45a2d1;
   background-color: transparent;
   text-decoration: underline;
 }
