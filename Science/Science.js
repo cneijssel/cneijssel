@@ -152,7 +152,7 @@ var Broekgaarden_2021 = {
 }//Close Broekgaarden_2021
 
 var Bavera_2020 = {
-  author    : ["simone S. Bavera", "Tassos Fragos", "Ying Qin", "Emmanouil Zapartas",
+  author    : ["Simone S. Bavera", "Tassos Fragos", "Ying Qin", "Emmanouil Zapartas",
          "Coenraad J. Neijssel", "Ilya Mandel", "Aldo Batta",
          "Sebastian M. Gaebel", "Chase Kimball", "Simon Stevenson"],
   title     : "The origin of spin in binary black holes - Predicting the distributions of the main observables of Advanced LIGO",
@@ -162,7 +162,7 @@ var Bavera_2020 = {
   year      : "2020",
   volume    : "635",
   pages     : "A97",
-  abstract  : "Not available, please look at the publisher"
+  abstract  :"Currently not availble, please click on the link for more information"
 } //Close Bavera_2020
 
 
@@ -193,7 +193,8 @@ var VignaGomez_2020 = {
                "Floor S. Broekgaarden", "Stephan Justham", "George Howitt", 
                "Selma E. de Mink", "Serena Vinciguerra", "Ilya Mandel"],
   year      : "2020", 
-  pages     : "e038"
+  pages     : "e038",
+  abstract  :"Currently not availble, please click on the link for more information"
 }//Close VignaGomez_2020
 
 
@@ -295,6 +296,7 @@ var Barrett_2016 = {
                "Simon Stevenson", "Alejandro Vigna-Gómez"],
   year      : "2016",
   pages     : "46–50",
+  abstract  :"Currently not availble, please click on the link for more information"
 }//Close Barrett_2016
 
 
@@ -313,7 +315,8 @@ var Almeida_2017 = {
   journal   : "Astronomy & Astrophysics",
   year      : "2017",
   volume    : "598",
-  pages     : "A84"
+  pages     : "A84",
+  abstract  :"Currently not availble, please click on the link for more information"
 }//Close Almeida_2017
 
 var Zapartas_2017 ={
@@ -327,7 +330,8 @@ var Zapartas_2017 ={
   journal   : "Astronomy & Astrophysics",
   year    : "2017",
   volume    : "601",
-  pages     : "A29"
+  pages     : "A29",
+  abstract  :"Currently not availble, please click on the link for more information"
 }//Close Zapartas_2017
 
 var Zapartas_2017b = {
@@ -399,6 +403,22 @@ function paragraphAddArticleLink(p, article){
   p.appendChild(temp_link);
 }
 
+
+
+function paragraphAddOverlayAbstract(parentID, ID,  article){
+  //https://www.w3docs.com/snippets/html/how-to-overlay-one-div-over-another.html
+  parentDiv               = document.getElementById(parentID);
+  subDivOverlay           = document.createElement('div');
+  subDivOverlay.className = "article overlay";
+  subDivOverlay.id        = parentID+ID+"_overlay";
+  parentDiv.appendChild(subDivOverlay);
+  p = addParagraphToDiv(subDivOverlay.id );
+  p.innerHTML = "<h4>"+article["author"]+"</h4>";
+  p = addParagraphToDiv(subDivOverlay.id);
+  p.innerHTML = " Abstract: <br> <i>" + article["abstract"] + "</i>";
+
+}
+
 function addPapersToParentDiv(parentID){
   console.log("creating"+parentID)
   let articles = a[parentID];
@@ -414,6 +434,8 @@ function addPapersToParentDiv(parentID){
     p   = addParagraphToDiv(subDiv.id);
     paragraphAddArticleTitle(p, article);
     paragraphAddArticleLink(p, article);
+    console.log("creating abstract overlay"+article["title"])
+    paragraphAddOverlayAbstract(parentID, subDiv.id,  article);
     //the parent div-block the subdivblock with the article
   }
 }

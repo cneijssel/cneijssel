@@ -37,7 +37,17 @@ div.header{
 }
 
 
+div.overlay {
+  z-index: 9;
+  margin: 30px;
+  background: none;
+  color:   #e2fcd4; 
+  display: none;
+}
 
+div.article:hover + div.overlay {
+  display: block;
+}
 
 
 .sidebar{
@@ -139,3 +149,5 @@ div.filler{
     height: 350px;
     width:100%;
 }
+
+
