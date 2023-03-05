@@ -1,9 +1,10 @@
 body.science {
     background-color: #4f5450;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-image: url('../Filler_Triangles.svg');
+    background-repeat: no-repeat; /* for vertical repeat */
+    background-repeat: no-repeat; /* for horizontal repeat */
+    background-size: 30%;
+    background-position: right;
     margin-top:0px;
     margin-left:210px;
     margin-right:0px;
@@ -11,104 +12,69 @@ body.science {
 
 }
 
-.article{
-    width:90%;
+
+
+
+
+div.container{
+    opacity: 1;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 2%;
+    height: 60px;
+    background-color: none;
+}
+
+
+
+div.article{
+    /*https://stackoverflow.com/questions/20383622/width-equal-to-content*/
     background-color: none;
     opacity: 1;
     color: #feffb3;
-    display:inline-block; 
-    padding:0px; 
-    margin-left:-4px; 
 }
 
-div.article:hover {
-    background: #6d6f73;
-    padding: 0px;
-    color:#e2fcd4;
-    margin-top:0px;
-    margin-bottom:0px;
-    opacity: 1;
+div.abstract {
+    color: #feffb3;
+    width: 100%;
+    display: block;
 }
+
+div.abstract:hover {
+    color: #4f5450;
+    background-color: #feffb3;
+}
+
 
 div.header{
     color: #fffccf;
     padding: 20px;
-    
+    width: 50%;
 }
 
 
 div.overlay {
   z-index: 9;
-  margin: 30px;
-  background: none;
-  color:   #e2fcd4; 
+  background-color: #feffb3;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: #4f5450;
   display: none;
-}
-
-div.article:hover + div.overlay {
-  display: block;
-}
-
-
-.sidebar{
-    position:absolute;
-    top:0; bottom:0; left:0;
-	width:200px;
-	height:105vh;   /*fudges to not have margin in window*/
-    margin-left:-210px;   /*fudges to not have margin in window*/
-    margin-top:-50px;
-    background:#;
-    display: none;
-    opacity:0;
-    overflow:auto;
-    
-
-}
-
-.one{
-    height: 100px;
-    width: 140px;
-    float: left;
-    line-height:150px; /*vertical align did not work don know why*/
-    opacity:1;
-    c-webkit-text-fill-color: transparent;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: OBLIVIOUSFONT;   
-    text-decoration: none;  /*removes underline href*/
-    margin-left:5px;
-    margin-top:50px;
+  opacity:1;
+  width: 20%;
+  height: 100%;
+  float: right;
+  padding-top: 20%;
+  padding-left: 5%;
+  padding-right:5%;
 }
 
 
-/*https://stackoverflow.com/questions/12992183/css-transition-fade-on-hover*/
-.sidebar:hover{
-    opacity:1.0;
-    -webkit-transition: opacity .5s;
-}
 
-
-img {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: -180px;
-    height: auto; 
-    width: auto;
-    margin-top:20px; 
-    max-width: 100px; 
-    max-height: 120px;
-}
-
-
-/*https://stackoverflow.com/questions/5210033/using-only-css-show-div-on-hover-over-a*/
-.showhim:hover .sidebar{
-display : block;
-  }
-
-
-
-.showhim{
-    position:absolute;
+div.abstract:hover + div.overlay {
+  /*https://www.w3schools.com/howto/howto_css_display_element_hover.asp*/
+  display: inline;
 }
 
 
@@ -120,34 +86,11 @@ a.article{
   text-decoration: none;
 }
 
-
-
 a.article:hover {
-  color: #51addb;
-  background-color: transparent;
   text-decoration: underline;
 }
 
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
 
-div.filler{
-    /*  https://stackoverflow.com/questions/20064596/adding-background-image-to-div-using-css
-        https://www.w3.org/TR/css-backgrounds-3/#background-repeat
-        https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-        https://www.w3schools.com/cssref/css3_pr_background-size.php
-    */
-    background-image: url('../Filler_Triangles.svg');
-    background-repeat: no-repeat; /* for vertical repeat */
-    background-repeat: no-repeat; /* for horizontal repeat */
-    background-size: auto;
-    background-position: right;
 
-    height: 350px;
-    width:100%;
-}
 
 

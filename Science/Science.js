@@ -271,7 +271,7 @@ var Barrett_2018 ={
 
 var Stevenson_2017 = {
   author    : ["Simon Stevenson", "Alejandro Vigna-Gómez", "Ilya Mandel",
-          "Jim W. Barrett", "Coenraad J. Neijssel", "Daid Perkins",
+          "Jim W. Barrett", "Coenraad J. Neijssel", "David Perkins",
           "Selma E. de Mink"],
   year      : "2017",
   day       : "05",
@@ -407,9 +407,10 @@ function paragraphAddArticleLink(p, article){
 
 function paragraphAddOverlayAbstract(parentID, ID,  article){
   //https://www.w3docs.com/snippets/html/how-to-overlay-one-div-over-another.html
+  //https://www.w3schools.com/howto/howto_css_display_element_hover.asp
   parentDiv               = document.getElementById(parentID);
   subDivOverlay           = document.createElement('div');
-  subDivOverlay.className = "article overlay";
+  subDivOverlay.className = "abstract overlay";
   subDivOverlay.id        = parentID+ID+"_overlay";
   parentDiv.appendChild(subDivOverlay);
   p = addParagraphToDiv(subDivOverlay.id );
@@ -424,19 +425,30 @@ function addPapersToParentDiv(parentID){
   let articles = a[parentID];
   parentDiv    = document.getElementById(parentID);
   for (let i = 0; i < articles.length; i++){
+
+    container           = document.createElement('div');
+    container.id        = parentID+i+"container"
+    container.className = 'container';
+    parentDiv.appendChild(container);
     let article  = articles[i];
-    console.log(parentDiv+"creating"+article["title"])
-    let subDiv       = document.createElement('div');
-    subDiv.id        = parentID+i;
-    subDiv.className = 'article';
-    parentDiv.appendChild(subDiv); //this is the actual line that adds it to the code
+    
+    let articleDiv       = document.createElement('div');
+    articleDiv.id        = parentID+i;
+    articleDiv.className = 'article';
+    container.appendChild(articleDiv); //this is the actual line that adds it to the code
     //in the div block I want a paragraph
-    p   = addParagraphToDiv(subDiv.id);
+    p   = addParagraphToDiv(articleDiv.id);
     paragraphAddArticleTitle(p, article);
     paragraphAddArticleLink(p, article);
-    console.log("creating abstract overlay"+article["title"])
-    paragraphAddOverlayAbstract(parentID, subDiv.id,  article);
-    //the parent div-block the subdivblock with the article
+    console.log("creating abstract overlay");
+
+    let abstractDiv     = document.createElement('div');
+    abstractDiv.id        = parentID+'abstract';
+    abstractDiv.className = "abstract"
+    abstractDiv.innerHTML = "Abstract";
+    container.appendChild(abstractDiv);
+    
+    paragraphAddOverlayAbstract(container.id, abstractDiv.id ,  article);
   }
 }
 

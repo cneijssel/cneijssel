@@ -12,7 +12,7 @@ body.index {
 }
 
 .clicker {
-    position:absolute;
+    position:fixed;
     top:0; bottom:0; left:0;
 	width:100px;
 	height:170px;  
@@ -25,7 +25,7 @@ body.index {
 }
 
 .hiddendiv{
-    position:absolute;
+    position:fixed;
     top:0; bottom:0; left:0;
 	width:200px;
 	height:100vh;   /*fudges to not have margin in window*/
@@ -41,27 +41,10 @@ display: block;
 }
 
 .clicker:focus + .hiddendiv{
-display:block;
+display: block;
 opacity: 1;
 }
 
-.article{
-    width:70%;
-    background-color: none;
-    opacity: 1;
-    color: white;
-    display:inline-block; 
-    padding:0px; 
-    margin-left:-4px; 
-}
-
-div.article:hover {
-    background: rgba(255, 122, 89, 1);
-    padding: 0px;
-    margin-top:0px;
-    margin-bottom:0px;
-    opacity: 1;
-}
 
 
 
@@ -98,6 +81,7 @@ img {
     margin-top:20px; 
     max-width: 100px; 
     max-height: 120px;
+    position: absolute;
 }
 
 
@@ -116,19 +100,7 @@ a.goto:hover {
   text-decoration: underline;
 }
 
-a.article{
-  color: #51addb;
-  background-color: transparent;
-  text-decoration: none;
-}
 
-
-
-a.article:hover {
-  color: #45a2d1;
-  background-color: transparent;
-  text-decoration: underline;
-}
 
 a:active {
   color: yellow;
