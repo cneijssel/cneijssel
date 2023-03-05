@@ -128,11 +128,12 @@ div.filler{
     /*  https://stackoverflow.com/questions/20064596/adding-background-image-to-div-using-css
         https://www.w3.org/TR/css-backgrounds-3/#background-repeat
         https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+        https://www.w3schools.com/cssref/css3_pr_background-size.php
     */
     background-image: url('../Filler_Triangles.svg');
     background-repeat: no-repeat; /* for vertical repeat */
     background-repeat: no-repeat; /* for horizontal repeat */
-    background-size: 100%;
+    background-size: auto;
     background-position: right;
 
     height: 350px;
