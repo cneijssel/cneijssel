@@ -29,7 +29,7 @@
 *  Main menu top on page
 */
 #open-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   padding: 14px 16px;
