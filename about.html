@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Neijssel :D</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<!-- HTML file for the main about page -->
+
+<body class="about-body">
+
+<div id="main-menu">
+<!--https://www.w3schools.com/css/css_navbar.asp-->
+  <a id="menulink" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+  <a id="menulink" href="./home.html">Home</a></li>
+  <a id="menulink" href="./science.html">Science</a></li>
+  <a id="menulink" href="./cv.html">CV</a></li>
+  <a id="menulink" href="./about.html">About</a></li>
+</div>
+
+<div id="open-menu">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+</div>
+
+</body>
+
+<script>
+function openNav() {
+  document.getElementById("main-menu").style.width = "250px";
+  document.getElementById("open-menu").style.width = "0px";
+  document.getElementById("open-menu").style.padding = "0px 0px";
+}
+
+function closeNav() {
+  document.getElementById("main-menu").style.width = "0px";
+  document.getElementById("open-menu").style.width = "150px";
+  document.getElementById("open-menu").style.padding = "14px 16px";
+}
+</script>
+
+</html> 
