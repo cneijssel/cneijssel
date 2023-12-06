@@ -1,0 +1,181 @@
+.home-body, .cv-body {
+  background: url(./Images/test2.svg) no-repeat center center fixed; 
+}
+
+.about-body, .science-body {
+  background: url(./Images/background.png) no-repeat center center fixed; 
+}
+
+.science-body, .home-body, .about-body, .cv-body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top:0px;
+  margin-left:210px;
+  margin-right:0px;
+  padding:0px;
+  font-family: "Lato", sans-serif; 
+
+}
+
+
+.fillerDiv {
+  display: block;
+  height: 60px;
+}
+
+/*
+*  Main menu top on page
+*/
+#open-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 16px;
+  background-color: #333;
+  opacity: 0.8;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+
+
+#main-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  opacity: 0.8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+#main-menu a{
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:1.5rem;
+}
+
+/* Change the link color on hover */
+#main-menu a:hover {
+  background-color: #555;
+  opacity: 1;
+}
+
+#main-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+}
+
+
+/*SCIENCE PAGE CSS SETTINGS*/
+
+
+.article{
+  opacity: 1;
+  display: inline-block;
+  width: 50%;
+  background-color: none;
+  padding: 14pt;
+  border-radius: 17px;
+  font-size: 1.2em;
+}
+
+.article:hover{
+  background-color:  #ffffff;;
+}
+
+.article p{
+  color: #ffffff;
+}
+
+.article:hover p{
+  color: #660066;
+}
+
+
+.article a{
+    /*https://stackoverflow.com/questions/20383622/width-equal-to-content*/
+    background-color: none;
+    opacity: 1;
+    color: #feffb3;
+}
+
+
+.articleinformation {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  opacity: 0.8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+/* --- CV --*/
+
+.entryCV {
+  padding:20px 20px;
+  overflow-x: scroll;
+}
+
+.entryLeft{
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  overflow: hidden;
+  padding:10px 10px;
+  color: #ffffff;
+  vertical-align: top;
+}
+
+.CVheader{
+  display: inline-block;
+  height: 50px;
+  width: 500px;
+  overflow: hidden;
+  padding:10px 10px;
+  color: #00ffff;
+  font-size: 1.6em;
+  vertical-align: top;
+
+}
+.entryRight {
+  display: inline-block;
+  height: 50px;
+  width: 600px;
+  overflow: hidden;
+  padding:10px 10px;
+  border-left: 2px solid white;
+  color: #ffffff;
+}
+
+.entryRight a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.toggleInfo {
+  text-decoration: none;
+  padding: 10px 10px;
+  float: right;
+  color: #00ffff;
+}

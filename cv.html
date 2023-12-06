@@ -1,0 +1,366 @@
+ <!DOCTYPE html>
+<html>
+<img src="./Images/background.png" style="display: none;" />
+<head>
+  <meta charset="utf-8">
+  <title>Neijssel :D</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<!-- HTML file for the main science page -->
+
+<body class="science-body">
+
+<div id="main-menu">
+<!--https://www.w3schools.com/css/css_navbar.asp-->
+  <a id="menulink" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+  <a id="menulink" href="./index.html">Home</a></li>
+  <a id="menulink" href="./science.html">Science</a></li>
+  <a id="menulink" href="./cv.html">CV</a></li>
+  <a id="menulink" href="./about.html">About</a></li>
+</div>
+
+<div id="open-menu">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+</div>
+
+
+
+<script src="mainjs.js"></script>
+
+<script>
+//Variables
+
+let aboutCV ={
+  id : "aboutCV",
+  left : "Curriculum Vitae",
+  shortDescription : "",
+  longDescription : "" 
+}
+
+let aboutMe ={
+  id : "aboutMe",
+  left : "About Me",
+  shortDescription : "<i>Curious</i> and <i>excited</i> <br> <i>Transparant </i> and <i>dedicated</i>",
+  longDescription : "" 
+}
+
+
+
+let workHeader   = {
+  id : "header",
+  left : "Work Experience",
+  shortDescription : "",
+  longDescription : ""
+  }
+
+let workVanDeBron = {
+  id : "VanDeBron",
+  left : "Sep 2023 - <br> Present",
+  shortDescription : "Business Analyst Customer Operations, <br>  VanDeBron (green energy company)",
+  longDescription : " Description will soon follow when I start the job :) "
+  
+  } //Close workTeaching
+  
+let workTeaching = {
+  id : "Teaching",
+  left : "Oct 2020 - <br> July 2023",
+  shortDescription : "Teacher, bachelor Physics & Astrophysics, <br>  University of Amsterdam, Netherlands",
+  longDescription : "Together with the coursecoordinator I taught different courses such as 'Academic Skills', 'Professional Skills' and 'Back-on-Track'. Based on my own scientific experience, I wrote new and creative teaching material to improve the structure and relevance of our courses. I helped in supervising and coordinating our team of teaching assistants (± 10 persons) and I took charge in restructuring our administration such that the information is more complete, clearer and quicker to find. Aside from teaching, I also mentored students for which I followed multiple trainings (inclusivity, group dynamics, 1-on-1 converstations and suicideprevention). It is my passion to help students, especially those who are fascinated by physics but have difficulty in progressing. I always made myself available for students when they have questions, together we often found a solution. The many different aspects of this job required good communication and organisational skills."
+  
+  } //Close workTeaching
+  
+let workPhD = {
+  id : "PhD",
+  left : "2016 - 2022",
+  shortDescription : "PhD. Institute for Gravitational-Wave Astronomy, <br> University of Birmingham, United Kingdom",
+  longDescription : "Full-time research under the supervision of Dr. I. Mandel. The main scope was theoretical and statistical research into the evolution of massive stars in binary systems, especially when and how they form colliding black holes that are detected during gravitational-wave surveys such as those performed by LIGO. I helped in developing the research-code COMPAS (<a href='https://compas.science/'> https://compas.science/ </a>) and supervising projects for bachelor- and masterstudents. I wrote software and performed data-science, -analysis, -engineering and -visualisation in Python and C++ to analyse the millions of different systems and parameters coming from our simulations. I did individual projects and helped collaborators in our team. My research led to new analytical models and  predictions which are published in multiple journals and which I have presented on international conferences."
+}
+
+let educationHeader = {
+  id : "educationHeader",
+  left : "Education",
+  shortDescription : "",
+  longDescription : ""
+}
+                    
+let educationMSc = {
+  id : "MSc",
+  left : "2014 - 2016",
+  shortDescription : "MSc. Astronomy and Astrophysics, <br> University of Amsterdam, Netherlands",
+  longDescription : "A master in astrophysics at the Anton Pannenkoek Institute with 60 EC (1 full year) of courses and 60 EC of research. Elective courses existed among others of Radio Astronomy (8/10), Particle Cosmology (8/10), and Interstellar and Circumstellar Matter (7.5/10). The research project, supervised by Dr. S. de Mink focused on interpreting the data of the VLT-Flames Tarantula Survey in the context of stellar evolution. My presentation won the price of best talk during the masterthesis symposium of our program."
+}
+
+let educationBSc = {
+  id : "BSc",
+  left : "2008 - 2014",
+  shortDescription : "BSc. Beta-Gamma, <br> University of Amsterdam, Netherlands",
+  longDescription : "A program at the Institute of Interdisciplinary Studies. I chose this program due to my broad interests in science. After the first year I chose the major in physics. Aside from physics I also followed courses in Chemistry and Biology (8.5/10), The state and society (7.5/10), Logic (8/10) and worked on several interdisciplinary projects with fellow students following different majors."
+}
+
+
+let conferenceHeader = {
+  id : "conferenceHeader",
+  left : "Conferences",
+  shortDescription : "",
+  longDescription : ""
+}
+
+
+let conferenceMelbourne = {
+  id : "conferenceMelbourne",
+  left : "Australia",
+  shortDescription : "<b> Colloquium </b> <br> 26/02/2020, Melbourne",
+  longDescription : "Melbourne University: Discussed the evolution of massive stellar binaries for X-ray Binaries and Binary Black Holes (1 hour)."
+}
+
+let conferenceTokyo = {
+  id : "conferenceTokyo",
+  left : "Japan",
+  shortDescription : "<b> Chair </b> <br> 20/01/2020 - 24/01/2020, Kashiwa,",
+  longDescription : "Kavli IPMU - LIGO/Virgo sources in O3 era: Introduced and lead the discussion on population synthesis in the morning session (1 hour)"
+}
+
+let conferenceOzgrav = {
+  id : "conferenceOzgrav",
+  left : "Australia",
+  shortDescription : "<b> Collaboration Poster </b> <br> 17/11/19 - 22/11/19 in Lorne",
+  longDescription : "OzGrav ECR: Designed and presented the collaboration poster for COMPAS"
+}
+
+let conferenceHannover = {
+  id : "conferenceHannover",
+  left : "Germany",
+  shortDescription : "<b> Colloquium </b> <br> 30/08/2018 , Hannover",
+  longDescription : "Max-Planck AEI: Presented work of cosmic integration and rates of Binary Black Holes for the institute (1 hour)."
+}
+
+let conferenceLiverpool = {
+  id : "conferenceLiverpool",
+  left : "England",
+  shortDescription : "<b> Talk </b> <br> 2018 03/04/2018 - 06/04/2018, Liverpool",
+  longDescription : "EWASS: Presented my work on cosmic integration and rates of Binary Black Holes (20 minutes)"
+}
+
+let conferenceGarching = {
+  id : "conferenceGarching",
+  left : "Germany",
+  shortDescription : "<b> Talk </b> <br> ESO imbase 2017 03/07/2017 - 07/07/2017, Garching",
+  longDescription : "Presented my work on the formation and rates of Binary Black Holes (20 minutes)"
+}
+
+let conferenceNAC = {
+  id : "conferenceNAC",
+  left : "Netherlands",
+  shortDescription : "<b> Poster </b> <br> 06/11/2015, Utrecht",
+  longDescription : "NAC: The Dutch Astronomy conference where I presented results of my masterthesis"
+}
+
+let conferenceBinaryC = {
+  id : "conferenceBinaryC",
+  left : "England",
+  shortDescription : "<b> Talk </b> <br> 08/08/2015 - 11/08/2015, Cambridge",
+  longDescription : "Binary population synthesis workshop: Presented my master-thesis science case for which I won a travel grant (15 minutes)"
+}
+
+
+let interestHeader = {
+  id : "interestHeader",
+  left : "Interests",
+  shortDescription : "",
+  longDescription : ""
+}
+
+let interestResearch = {
+  id : "interestResearch",
+  left : "Research",
+  shortDescription : "Interdisciplinary, statistics, positive impact on society",
+  longDescription : ""
+}
+
+let interestDesign = {
+  id : "interestDesign",
+  left : "Design",
+  shortDescription : "Posters, data-visualisation, presenting, graphics and art",
+  longDescription : ""
+}
+
+let interestEducation = {
+  id : "interestEducation",
+  left : "Education",
+  shortDescription : "Outreach, mentoring and coaching, supervising research projects",
+  longDescription : ""
+}
+
+
+let skillsHeader = {
+  id : "skillsHeader",
+  left : "Skills",
+  shortDescription : "",
+  longDescription : ""
+}
+
+let skillsCoding = {
+  id : "skillsCoding",
+  left : "Coding",
+  shortDescription : "Python, Latex, basics of C++, HTML, javascript, CSS and git-workflow",
+  longDescription : ""
+}
+
+let skillsLanguages = {
+  id : "skillsLanguages",
+  left : "Languages",
+  shortDescription : "Fluent in English and Dutch, basics of Italian",
+  longDescription : ""
+}
+
+let skillsGraphics = {
+  id : "skillsGraphics",
+  left : "Graphics",
+  shortDescription : "Data-visualisation in Python, drawing, basics of GIMP",
+  longDescription : ""
+}
+
+let skillsDidactic = {
+  id : "skillsDidactic",
+  left : "Didactic",
+  shortDescription : "Training in group dynamics, inclusivity, 1-on-1 coaching, suicide prevention",
+  longDescription : ""
+}
+
+let skillsResearch = {
+  id : "skillsTechniques",
+  left : "Research",
+  shortDescription : "Planning research, coding, statistics, large linked data-sets, data-analysis",
+  longDescription : ""
+}
+
+
+function createLeftEntry(containerId, entry, i) {
+  entryDiv           = document.createElement('div');
+  entryDiv.id        = entry["id"]+'Left';
+  if(i==0){
+    //header
+    entryDiv.className = 'CVheader';
+  }
+  else{
+    entryDiv.className = 'entryLeft';
+  }
+
+  let left           = document.createElement("p");
+  left.innerHTML = "<b>" + entry["left"] +"</b>";
+  left.style.cssFloat = "left";
+  entryDiv.appendChild(left);
+  container           = document.getElementById(containerId);
+  container.appendChild(entryDiv);
+  }
+ 
+function createRightEntry(containerId, entry){
+  entryDiv           = document.createElement('div');
+  entryDiv.id        = entry["id"];
+  entryDiv.className = 'entryRight';
+
+  
+  let shortDes     = document.createElement("p");
+  shortDes.innerHTML = "<b>" + entry["shortDescription"] +"</b>";
+  shortDes.style.cssFloat = "left";
+  entryDiv.appendChild(shortDes);
+
+  if(entry["longDescription"] != "") {
+    let infoButton   = document.createElement("a");
+    let val          = entry["id"]
+    infoButton.setAttribute('class', "toggleInfo");
+    infoButton.href  = "javascript:void(0)"; 
+    infoButton.addEventListener('click', function(){
+        toggleInfo(entry["id"]);
+      });
+    infoButton.innerHTML = "<b> <br> more info </b>";
+    //infoButton.style.cssFloat = "right";
+    entryDiv.appendChild(infoButton);
+
+    //var inputElement = document.createElement('input');
+    //inputElement.type  = "button";
+    //inputElement.setAttribute('class', "toggleInfo");
+    //inputElement.addEventListener('click', function(){
+    //    toggleInfo(entry["id"]);
+    //  });
+    //inputElement.textContent = "more";
+    //entryDiv.appendChild(inputElement);
+    let longDes      = document.createElement("p");
+    //let longTxt      = document.createTextNode(entry["longDescription"]);
+    //longDes.appendChild(longTxt)
+    longDes.innerHTML = entry["longDescription"];
+    longDes.style.cssFloat = "left";
+    entryDiv.appendChild(longDes)
+  }
+  console.log(containerId);
+  container           = document.getElementById(containerId);
+  container.appendChild(entryDiv);
+  
+}
+
+function createEntriesTopic(Topic){
+
+  for (let i = 0; i < Topic.length; i++){
+    entry   = Topic[i];
+    
+    container           = document.createElement('div');
+    container.id        = "entryCV"+entry.id;
+    console.log(container.id)
+    container.class     = "entryCV";
+    document.body.appendChild(container);
+  
+    createLeftEntry(container.id, entry, i);
+    if(i != 0){
+      createRightEntry(container.id, entry);
+    }
+  }
+}
+
+function addFillerDiv(){
+  container           = document.createElement('div');
+  container.setAttribute('class', "fillerDiv");
+  document.body.appendChild(container);
+}
+
+var personal = [aboutCV, aboutMe ];
+var workExperience = [workHeader, workVanDeBron, workTeaching,workPhD];
+var education = [educationHeader, educationMSc, educationBSc];
+var conferences = [conferenceHeader, conferenceMelbourne, conferenceTokyo, conferenceOzgrav, conferenceHannover, conferenceLiverpool, conferenceGarching, conferenceNAC, conferenceBinaryC];
+var skills    = [skillsHeader, skillsCoding, skillsResearch, skillsDidactic, skillsLanguages, skillsGraphics];
+var interests = [interestHeader, interestResearch, interestDesign, interestEducation];
+
+addFillerDiv();
+createEntriesTopic(personal);
+
+addFillerDiv();
+createEntriesTopic(workExperience);
+
+addFillerDiv();
+createEntriesTopic(education);
+
+addFillerDiv();
+createEntriesTopic(skills);
+
+addFillerDiv();
+createEntriesTopic(interests);
+
+addFillerDiv();
+createEntriesTopic(conferences);
+
+addFillerDiv();
+addFillerDiv();
+//https://stackoverflow.com/questions/39023632/how-do-i-make-this-use-the-same-button-for-open-and-close
+function toggleInfo(ID) {
+    var element = document.getElementById(ID);
+    if (element.style.height == "auto") {
+        element.style.height = "50px";
+    } else {
+        element.style.height = "auto";
+    }
+}
+</script>
+
+</body>
+
+</html> 
