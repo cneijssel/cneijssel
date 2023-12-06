@@ -3,28 +3,29 @@
 
 <head>
   <meta content="width=device-width, initial-scale=1">
-  <title>Neijssel Vinciguerra!!!</title>
+  <title>Neijssel :D</title>
   <link rel="stylesheet" href="main.css">
 </head>
 
 <!-- HTML file for the main Homepage -->
 
-
 <body class="home-body">
-<div>
-<a href="./Italian.html">
-  <button class="button1">Italiano</button></a>
-</div>
-<div>
-<a href="./Dutch.html"> 
-  <button class="button1">Nederlands</button></a>
-</div>
-<div>
-<a href="./index.html">
-  <button class="button1">English</button></a>
+
+
+<div id="main-menu">
+<!--https://www.w3schools.com/css/css_navbar.asp-->
+  <a id="menulink" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+  <a id="menulink" href="./index.html">Home</a></li>
+  <a id="menulink" href="./science.html">Science</a></li>
+  <a id="menulink" href="./cv.html">CV</a></li>
+  <a id="menulink" href="./about.html">About</a></li>
 </div>
 
+<div id="open-menu">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+</div>
 
 </body>
 
+<script src="mainjs.js"></script>
 </html> 
